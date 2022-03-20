@@ -1,0 +1,28 @@
+package tests.web;
+
+
+import java.time.Duration;
+
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
+
+
+public class googleMyName {
+	public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        
+//        driver.manage().timeouts().implicitlyWait(DownAction.ofSeconds(2000));
+        driver.get("https://www.google.com");
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.get("https://google.com");
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(duration);
+
+
+        driver.quit();
+    }
+}

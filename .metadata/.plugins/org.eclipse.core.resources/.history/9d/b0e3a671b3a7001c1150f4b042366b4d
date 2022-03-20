@@ -1,0 +1,30 @@
+package tests.web;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.JavascriptExecutor;
+
+public class googleMyName {
+	public static void main(String[] args) throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        
+        String url = "https://ebay.com";
+        driver.get(url);
+        driver.manage().window().maximize();
+        Thread.sleep(5000);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+//        JavascriptExecutor j = (JavascriptExecutor) driver;
+//        j.executeScript("return document.readyState").toString().equals("complete");
+//        // get the current URL
+//        String s = driver.getCurrentUrl();
+//        // checking condition if the URL is loaded
+//        if (s.equals(url)) {
+//           System.out.println("Page Loaded");
+//           System.out.println("Current Url: " + s);
+//        }
+//        else {
+//           System.out.println("Page did not load");
+//        }
+        driver.quit();
+    }
+}

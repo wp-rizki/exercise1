@@ -1,0 +1,29 @@
+package tests.web;
+
+import org.openqa.selenium.UnsupportedCommandException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.concurrent.TimeUnit;
+
+//import org.openqa.selenium.JavascriptExecutor;
+
+public class googleMyName {
+	public static void main(String[] args) throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        
+        try {
+        	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        } catch (UnsupportedCommandException e) {
+
+        }
+        
+        //open ebay
+        driver.get("https://ebay.com");
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        
+        
+        driver.quit();
+    }
+}
